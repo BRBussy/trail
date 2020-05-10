@@ -7,6 +7,7 @@ const drawerMiniWidth = 80;
 
 const useStyles = makeStyles((theme: Theme) => ({
     drawerPaper: {
+        backgroundColor: theme.palette.primary.main,
         'border': 'none',
         'position': 'fixed',
         'top': '0',

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     makeStyles, Theme,
-    AppBar, Toolbar, useMediaQuery, useTheme, Fab
+    AppBar, Toolbar, useMediaQuery, useTheme, Fab, IconButton
 } from "@material-ui/core";
 import {Breakpoint} from '@material-ui/core/styles/createBreakpoints';
 import {isWidthUp} from '@material-ui/core/withWidth';
@@ -92,15 +92,15 @@ export default function Header(props: HeaderProps) {
             >
                 <Toolbar className={classes.toolbarDesktop}>
                     <div className={classes.sidebarMinimize}>
-                        <Fab
+                        <IconButton
                             size={'small'}
                             onClick={props.sidebarMinimize}
                         >
                             {props.miniActive
-                                ? <ViewList className={classes.sidebarMiniIcon}/>
-                                : <MoreVert className={classes.sidebarMiniIcon}/>
+                                ? <ViewList/>
+                                : <MoreVert/>
                             }
-                        </Fab>
+                        </IconButton>
                     </div>
                     <div className={classes.desktopViewName}>
                         Home
@@ -121,12 +121,12 @@ export default function Header(props: HeaderProps) {
                     <div>
                         home
                     </div>
-                    <Fab
+                    <IconButton
                         size={'small'}
                         onClick={props.handleSidebarToggle}
                     >
                         <Menu/>
-                    </Fab>
+                    </IconButton>
                 </Toolbar>
             </AppBar>
         );
