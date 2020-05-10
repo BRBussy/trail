@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import {CssBaseline} from '@material-ui/core';
 import * as serviceWorker from './serviceWorker';
-import EventContext from 'context/Event';
 import ThemeContext from 'context/Theme';
 import config from 'react-global-configuration';
 
@@ -17,7 +16,6 @@ try {
 
 if (subdomain === 'localhost') {
     config.set({
-        eventURL: 'ws://localhost:8080/ws',
         authURL: 'http://localhost:8180/api',
         roleURL: 'http://localhost:8181/api',
         userURL: 'http://localhost:8182/api'
@@ -34,9 +32,7 @@ ReactDOM.render(
     <React.StrictMode>
         <ThemeContext>
             <CssBaseline/>
-            <EventContext>
-                <App/>
-            </EventContext>
+            <App/>
         </ThemeContext>
     </React.StrictMode>,
     document.getElementById('root')

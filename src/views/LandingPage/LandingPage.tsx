@@ -17,12 +17,7 @@ export default function LandingPage() {
 
     return (
         <div className={classes.root}>
-            <Button
-                onClick={() => history.push('/login')}
-                variant={'contained'}
-                color={'primary'}
-                children={'Login'}
-            />
+            awe we land!
         </div>
     )
 }
