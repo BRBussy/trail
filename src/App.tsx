@@ -38,6 +38,17 @@ const useStyles = makeStyles((theme) => ({
             width: `calc(100% - ${drawerMiniWidth}px)`
         }
     },
+    content: {
+        marginTop: '50px',
+        padding: theme.spacing(1),
+        height: 'calc(100vh)',
+        overflowY: 'hidden'
+    },
+    container: {
+        height: 'calc(100vh - 55px)',
+        overflowY: 'scroll',
+        overflowX: 'hidden'
+    }
 }));
 
 function App() {
@@ -68,9 +79,13 @@ function App() {
                     sidebarMinimize={() => setMiniActive(!miniActive)}
                     handleSidebarToggle={() => setMiniActive(!miniActive)}
                 />
-                <BrowserRouter>
-                    <Router routes={publicRoutes}/>
-                </BrowserRouter>
+                <div className={classes.content}>
+                    <div className={classes.container}>
+                        <BrowserRouter>
+                            <Router routes={publicRoutes}/>
+                        </BrowserRouter>
+                    </div>
+                </div>
             </div>
         </div>
     );
