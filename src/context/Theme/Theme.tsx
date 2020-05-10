@@ -12,14 +12,14 @@ export const defaultTheme = createMuiTheme({
     },
     palette: {
         primary: {
-            light: '#F8BBD0',
-            main: '#E91E63',
-            dark: '#C2185B'
+            light: '#4c8c4a',
+            main: '#1b5e20',
+            dark: '#003300'
         },
         secondary: {
-            light: '#80e27e',
-            main: '#4caf50',
-            dark: '#087f23',
+            light: '#9c786c',
+            main: '#6d4c41',
+            dark: '#40241a',
             contrastText: '#ffffff'
         },
         error: {
