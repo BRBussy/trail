@@ -55,7 +55,6 @@ function App() {
     const classes = useStyles();
     const [sideBarOpen, setSidebarOpen] = useState(false);
     const [miniActive, setMiniActive] = useState(false);
-    const [sidebarMinimize, setSidebarMinimize] = useState(false)
 
     return (
         <div
@@ -75,9 +74,9 @@ function App() {
                 }
             >
                 <Header
-                    miniActive={miniActive}
+                    miniActive={false}
                     sidebarMinimize={() => setMiniActive(!miniActive)}
-                    handleSidebarToggle={() => setMiniActive(!miniActive)}
+                    handleSidebarToggle={() => setSidebarOpen(!sideBarOpen)}
                 />
                 <div className={classes.content}>
                     <div className={classes.container}>
