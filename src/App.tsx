@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         marginTop: '50px',
-        padding: theme.spacing(1),
+        padding: theme.spacing(1, 0, 1, 1),
         height: 'calc(100vh)',
         overflowY: 'hidden'
     },
@@ -64,6 +64,7 @@ function App() {
             <Sidebar
                 open={sideBarOpen}
                 handleSidebarToggle={() => setSidebarOpen(!sideBarOpen)}
+                miniActive={miniActive}
             />
             <div
                 className={
