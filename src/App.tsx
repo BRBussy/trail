@@ -80,7 +80,7 @@ function App() {
                     handleSidebarToggle={() => setSidebarOpen(!sideBarOpen)}
                 />
                 <div className={classes.content}>
-                    <div className={classes.container}>
+                    <div className={cx(classes.container, 'trailScroll')}>
                         <BrowserRouter>
                             <Router routes={publicRoutes}/>
                         </BrowserRouter>
