@@ -1,6 +1,5 @@
 import React from 'react'
-import {Button, makeStyles} from '@material-ui/core'
-import { useHistory } from 'react-router-dom';
+import {makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LandingPage() {
     const classes = useStyles();
-    const history = useHistory();
 
     return (
         <div className={classes.root}>
